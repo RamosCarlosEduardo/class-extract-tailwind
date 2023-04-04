@@ -1,7 +1,9 @@
 import {
 	container,
 	ul,
-	navLink } from "./index.css";
+	navLink,
+  mudaCorFundo } from "./index.css";
+import {cls} from '/utils/cls.js'
 
 function NavbarUnorganized () {
   return (
@@ -19,14 +21,14 @@ function NavbarUnorganized () {
   );
 }
 
-function NavbarOrganized () {
+function NavbarOrganized (props) {    
     return (
         <nav className={container}>
-          <a href="/">
+          <a href="/" >
             <img className="w-[125px]" src={'https://http.cat/202'} alt="Logo da Nav de Exemplo." />
           </a>
           <ul className={ul}>
-              <li><a href="/" className={navLink}>Home</a></li>
+              <li><a href="/" className={cls(mudaCorFundo(props.intent), navLink)}>Home</a></li>
               <li><a href="/produtos" className={navLink}>Produtos</a></li>
               <li><a href="/contato" className={navLink}>Contato</a></li>
               <li><a href="/carrinho" className={navLink}>Carrinho</a></li>

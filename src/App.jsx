@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavbarUnorganized />
+      <NavbarOrganized intent="danger" />
       <NavbarOrganized />
     </div>
   )

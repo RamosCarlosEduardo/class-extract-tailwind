@@ -1,0 +1,1 @@
+export const cls = (...params) => [...params].join(' ')
